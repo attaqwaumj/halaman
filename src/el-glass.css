@@ -1,0 +1,28 @@
+/* Base Glassmorphism Styles with CSS Variables */
+.glass,
+.glass-dark,
+.glass-panel {
+    --glass-bg-color: rgba(255, 255, 255, 0.5); /* Default white */
+    --glass-opacity: 0.5; /* Default opacity */
+    --glass-blur: 10px; /* Default blur */
+    --glass-border-color: rgba(255, 255, 255, 0.2); /* Default border color */
+    
+    background: var(--glass-bg-color);
+    border-radius: 0px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    border: 1px solid var(--glass-border-color);
+}
+
+/* Dark Theme */
+.glass-dark {
+    --glass-bg-color: rgba(0, 0, 0, 0.5); /* Dark glass */
+    --glass-border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Prism-like Panel Theme */
+.glass-panel {
+    --glass-bg-color: linear-gradient(135deg, rgba(255, 0, 150, 0.5), rgba(0, 206, 255, 0.5)); /* Prism colors */
+    --glass-border-color: rgba(255, 255, 255, 0.3);
+}

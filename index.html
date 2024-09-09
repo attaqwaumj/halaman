@@ -1,25 +1,42 @@
 <!DOCTYPE html>
 <html>
 <title>Sample Page</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="src/el-singular.css">
+<link rel="stylesheet" href="src/el-glass.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="src/tailwind-cfg.js"></script>
+<script src="src/el-glass.js"></script>
 <body>
-    <div class="w3-container w3-red">
-        <h1>Sampel Page</h1>
+      <!-- Video Background Section -->
+  <div class="relative h-screen">
+    <video id="video-jumbotron-container"  autoplay muted loop>
+      <source src="video/MAH00934.webm" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
+
+    <!-- Title in the center with an image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <img src="img/logoM.png" alt="Title" class="w-3/4 h-auto sm:w-4/5 md:w-4/5 lg:w-3/5">
     </div>
-    <div class="w3-container w3-red">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consequat sodales tellus, pulvinar ullamcorper dui tincidunt ut. Aenean faucibus neque vitae justo consectetur eleifend. Duis vel sodales lacus, nec hendrerit dui. Aenean hendrerit tincidunt blandit. Curabitur non leo non erat lacinia gravida sit amet at ipsum. Aliquam leo lorem, hendrerit sit amet imperdiet eget, placerat vitae magna. Mauris finibus nibh tincidunt varius vulputate. Nunc viverra ex ac ligula dapibus commodo ac ac dolor. Maecenas bibendum scelerisque rutrum. Cras sit amet felis non ipsum porttitor imperdiet. Fusce ut justo ex. Fusce luctus maximus lectus, eget mollis justo eleifend ut.
+  </div>
 
-Maecenas quis elit sit amet nulla sollicitudin bibendum sit amet sed urna. In ut ultrices diam. Suspendisse faucibus, felis et ultrices tincidunt, sapien neque congue nibh, vitae malesuada felis magna eget felis. Proin pellentesque eros a velit iaculis placerat. Ut eget massa tempor, egestas tellus a, laoreet augue. Integer blandit magna at augue scelerisque, at commodo turpis venenatis. Nunc ultricies, nisi imperdiet ultrices pretium, nisi ipsum dignissim nibh, quis laoreet nibh lorem quis enim. Nullam lacinia felis vitae sapien porta, vel maximus nibh molestie. Integer sed ante sit amet arcu blandit aliquam. Pellentesque eu ipsum mollis, vulputate nunc a, consectetur magna. Proin fringilla, leo eu scelerisque porttitor, nunc nunc pretium eros, mattis gravida turpis nulla nec ligula. Curabitur nec urna efficitur sapien sagittis tincidunt quis a leo. Nullam interdum tincidunt augue, suscipit facilisis ex interdum non. Aenean in pretium ex, id accumsan dolor.
-
-Quisque congue, lacus id tristique condimentum, ex lorem venenatis leo, id ultrices diam nisi sit amet urna. Nunc tincidunt sem ut porta vestibulum. Phasellus aliquam dapibus dolor, a scelerisque magna fringilla sed. Fusce quis nisl vehicula, placerat erat id, porta nunc. Duis quis risus vulputate risus imperdiet malesuada. Fusce lobortis ut erat in laoreet. Maecenas vel eros eget risus placerat tempor. Proin tempor sapien elit, a cursus quam fermentum ut. Proin sapien sapien, tincidunt in leo sit amet, finibus porttitor purus. Etiam fringilla at velit eget elementum. Aliquam lacinia felis arcu, et varius nisi luctus vitae. Etiam tincidunt sed purus at venenatis.
-
-Proin lobortis quis quam vitae varius. In at enim vel sem ultricies pulvinar. Cras scelerisque euismod rutrum. Vestibulum maximus ligula risus, quis volutpat enim placerat vel. Donec vel massa magna. Donec ipsum ipsum, blandit sit amet erat ac, gravida fermentum est. Vestibulum ac leo nulla. Fusce ornare dolor a felis mollis, non sodales nisi porttitor. Nunc eu consequat felis.
-
-Mauris nisi risus, blandit in odio eu, imperdiet eleifend leo. Etiam sagittis ex viverra placerat malesuada. Sed eget enim viverra, ultrices libero quis, laoreet odio. Vivamus elit neque, cursus vitae rhoncus vitae, mollis sed leo. Phasellus bibendum metus non egestas venenatis. Nunc viverra, odio et ornare viverra, dui sapien semper mi, nec tristique arcu magna vel lectus. Donec id mi ultricies nisi varius rutrum nec sit amet ligula. Vestibulum ex nisi, pulvinar id arcu ac, sodales suscipit purus. Proin varius vehicula porttitor.</p>
-    </div>
-    <div class="w3-container w3-red">
-        <p>My footer information</p>
-    </div>
+  <!-- 5 Full-Size Containers -->
+  <div class="h-screen bg-blue-500 flex items-center justify-center text-white">
+    <h2 class="text-4xl">Container 1</h2>
+  </div>
+  <div class="h-screen bg-green-500 flex items-center justify-center text-white">
+    <h2 class="text-4xl">Container 2</h2>
+  </div>
+  <div class="h-screen bg-red-500 flex items-center justify-center text-white">
+    <h2 class="text-4xl">Container 3</h2>
+  </div>
+  <div class="h-screen bg-yellow-500 flex items-center justify-center text-white">
+    <h2 class="text-4xl">Container 4</h2>
+  </div>
+  <div class="h-screen bg-purple-500 flex items-center justify-center text-white">
+    <h2 class="text-4xl">Container 5</h2>
+  </div>
 </body>
 </html>
