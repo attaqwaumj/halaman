@@ -4,22 +4,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="src/el-singular.css">
 <link rel="stylesheet" href="src/el-glass.css">
+<link rel="stylesheet" href="src/el-global.css">
 <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="src/el-glass.js"></script>
 <body>
-      <!-- Video Background Section -->
-  <div class="relative h-screen">
-    <video id="video-jumbotron-container"  autoplay muted loop>
-      <source src="video/MAH00934.webm" type="video/mp4">
-      Your browser does not support HTML5 video.
-    </video>
-
-    <!-- Title in the center with an image -->
-    <div class="absolute inset-0 flex items-center justify-center">
-      <img src="img/logoM.png" alt="Title" class="w-3/4 h-auto sm:w-4/5 md:w-4/5 lg:w-3/5">
-    </div>
-  </div>
+  
   <!-- Navbar -->
   <nav class="fixed top-0 left-0 w-full shadow-md z-50 glass:0.3-5px">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -41,11 +31,26 @@
       </div>
     </div>
   </nav>
+      <!-- Video Background Section -->
+  <div class="relative h-screen">
+    <video id="video-jumbotron-container"  autoplay muted loop>
+      <source src="video/MAH00934.webm" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
+
+    <!-- Title in the center with an image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <img src="img/logoM.png" alt="Title" class="w-3/4 h-auto sm:w-4/5 md:w-4/5 lg:w-3/5">
+    </div>
+    <div class="absolute bottom-0 flex items-center justify-center mb-[-15px]">
+      <img src="img/BGLAYER.png" alt="Title" class="w-full">
+    </div>
+  </div>
   <!-- 5 Full-Size Containers -->
   <div class="w-full items-center justify-center p-5">
     <div class="w-full whitespace-nowrap pb-2">
       <p>Waktu saat ini: <span id="atq-gregorian-date"></span> : <span id="atq-current-time"></span></p>
-      <p>Konfigurasi Tanggal:  <input type="text" id="atq-datepicker"> / <span id="atq-hijri-date"></span><span id="atq-hijri-date-now"></span></p>
+      <p>Konfigurasi Tanggal:  <input class="border-2 border-green-500" type="text" id="atq-datepicker"> / <span id="atq-hijri-date"></span><span id="atq-hijri-date-now"></span></p>
       <p><span id="atq-locate-button" >Lokasi Sekarang</span></p>
     </div>
       <div class="text-xl w-full content-center text-center grid gap-4 sm:grid-cols-2 md:grid-cols-2  lg:grid-cols-6 xl:grid-cols-6">
