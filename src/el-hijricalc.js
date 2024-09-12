@@ -121,3 +121,45 @@ $(document).ready(function() {
     // Initial load of prayer times with default location
     updatePrayerTimes(now, defaultCoordinates);
 });
+$(document).ready(function() {
+    function adjustDatepickerWidth() {
+        const date = $('#atq-datepicker').val();
+        const $input = $('#atq-datepicker');
+        const length = date.length;
+
+        // Estimate width based on length of content
+        const newWidth = length * 8 + 28; // Adjust multiplier and padding as needed
+        $input.css('width', newWidth + 'px');
+    }
+
+    // Adjust width initially
+    adjustDatepickerWidth();
+
+    // Adjust width on date selection
+    $('#atq-datepicker').datepicker({
+        dateFormat: "dd-mm-yy",
+        onSelect: function(dateText) {
+            adjustDatepickerWidth();
+            // Other onSelect logic...
+        }
+    });
+});
+
+    function getUserLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+            function(position) {
+                const userCoordinates = {
+                    lat: position.coords.latitude,
+                    lon: position.coords.longitude
+                };
+                updatePrayerTimes(new Date(), userCoordinates); // Assuming updatePrayerTimes is in script.js
+            },
+            function() {
+                updatePrayerTimes(new Date(), defaultCoordinates); // Assuming defaultCoordinates is defined in script.js
+            }
+        );
+    } else {
+        updatePrayerTimes(new Date(), defaultCoordinates); // Assuming defaultCoordinates is defined in script.js
+    }
+}

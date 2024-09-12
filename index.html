@@ -4,9 +4,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="src/el-singular.css">
 <link rel="stylesheet" href="src/el-glass.css">
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 <script src="https://cdn.tailwindcss.com"></script>
-<script src="src/tailwind-cfg.js"></script>
 <script src="src/el-glass.js"></script>
 <body>
       <!-- Video Background Section -->
@@ -21,10 +20,60 @@
       <img src="img/logoM.png" alt="Title" class="w-3/4 h-auto sm:w-4/5 md:w-4/5 lg:w-3/5">
     </div>
   </div>
+  <!-- Navbar -->
+  <nav class="fixed top-0 left-0 w-full shadow-md z-50 glass:0.3-5px">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        
+        <!-- Left Side: Logo and Menus -->
+        <div class="flex items-center">
+          <!-- Placeholder Logo -->
+          <img class="h-10 w-10 mr-4" src="https://via.placeholder.com/50" alt="Logo" />
 
+          <!-- Hidden on mobile, visible on larger screens -->
+          <div class="hidden md:flex space-x-8">
+            <a href="#" class="text-black-700 hover:text-gray-900">Menu 1</a>
+            <a href="#" class="text-black-700 hover:text-gray-900">Menu 2</a>
+            <a href="#" class="text-black-700 hover:text-gray-900">Menu 3</a>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </nav>
   <!-- 5 Full-Size Containers -->
-  <div class="h-screen bg-blue-500 flex items-center justify-center text-white">
-    <h2 class="text-4xl">Container 1</h2>
+  <div class="w-full items-center justify-center p-5">
+    <div class="w-full whitespace-nowrap pb-2">
+      <p>Waktu saat ini: <span id="atq-gregorian-date"></span> : <span id="atq-current-time"></span></p>
+      <p>Konfigurasi Tanggal:  <input type="text" id="atq-datepicker"> / <span id="atq-hijri-date"></span><span id="atq-hijri-date-now"></span></p>
+      <p><span id="atq-locate-button" >Lokasi Sekarang</span></p>
+    </div>
+      <div class="text-xl w-full content-center text-center grid gap-4 sm:grid-cols-2 md:grid-cols-2  lg:grid-cols-6 xl:grid-cols-6">
+        <div class="rounded border-2 pt-2 pb-2 border-green-400 border-4">
+          <h3>SUBUH</h3>
+          <span id="atq-prayer-time-fajr">00.00</span>
+        </div>
+        <div class="rounded border-2 pt-2 pb-2 border-green-400 border-4">
+          <h3>TERBIT</h3>
+          <span id="atq-prayer-time-sunrise">00.00</span>
+        </div>
+        <div class="rounded border-2 pt-2 pb-2 border-green-400 border-4">
+          <h3>DZUHUR</h3>
+          <span id="atq-prayer-time-dhuhr">00.00</span>
+        </div>
+        <div class="rounded border-2 pt-2 pb-2 border-green-400 border-4">
+          <h3>ASHAR</h3>
+          <span id="atq-prayer-time-asr">00.00</span>
+        </div>
+        <div class="rounded border-2 pt-2 pb-2 border-green-400 border-4">
+          <h3>MAGRIB</h3>
+          <span id="atq-prayer-time-maghrib">00.00</span>
+        </div>
+        <div class="rounded border-2 pt-2 pb-2 border-green-400 border-4">
+          <h3>ISYA</h3>
+          <span id="atq-prayer-time-isha">00.00</span>
+        </div>
+      </div>
   </div>
   <div class="h-screen bg-green-500 flex items-center justify-center text-white">
     <h2 class="text-4xl">Container 2</h2>
@@ -38,5 +87,11 @@
   <div class="h-screen bg-purple-500 flex items-center justify-center text-white">
     <h2 class="text-4xl">Container 5</h2>
   </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+  <script src="src/tailwind-cfg.js"></script>
+  <script src="src/el-hijricalc.js"></script>
+  <script src="lib/hijridata.js"></script>
 </body>
 </html>
